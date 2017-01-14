@@ -17,10 +17,10 @@ data TechReference = TechReference
     }
 
 instance Show TechReference where
-  show t = "\tReference for Technology\n" ++
-           "\t\tID: " ++ show (techRefID t) ++
-           "\n\t\tCountry: " ++ techRefCountry t ++
-           "\n\t\tOrganization: " ++ techRefOrganization t ++
-           "\n\t\tDependency: " ++ techRefDependency t ++
-           "\n\t\tExpert: " ++ techRefExpert t ++
-           "\n\t\tEmail: " ++ techRefEmail t
+  show t = "\tReference for Technology\n" ++ "\t------------------------\n" ++
+           "\tID: " ++ show (techRefID t) ++
+           "\n\tCountry: " ++ techRefCountry t ++
+           "\n\tOrganization: " ++ techRefOrganization t ++
+           "\n\tDependency: " ++ techRefDependency t ++
+           "\n\tExpert: " ++ techRefExpert t ++
+           "\n\tEmail: " ++ techRefEmail t

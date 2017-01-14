@@ -8,11 +8,21 @@ module LatexFormatter
     toLatexTRefSpa, toLatexEmail
   ) where
 
+import Data.List(intercalate)
 import TechReference
+import Technology
+
+toLatexTechSpa :: Technology -> String
+toLatexTechSpa t =  "\\section{" ++ show (techName t) ++ "}\n\n" ++
+                    "\\textbf{Descripci\\'on} " ++ techDesc t ++ "\n" ++
+                    "\\textbf{\\'Area convergente} " ++ techConv t ++ "\n" ++
+                    "\\textbf{\\'Indicador de madurez} " ++ techMatr t ++ "\n" ++
+                    "\n" ++ intercalate "\n\n" (map toLatexTRefSpa (techRefs t))
+
 
 -- Formatting of a technology reference as LaTeX code in Spanish
-toLatexTRefSpa :: TechReference -> Int -> String
-toLatexTRefSpa t sq =  "\\subsection{Referencia " ++ show (sq) ++ "}\n\n" ++
+toLatexTRefSpa :: TechReference -> String
+toLatexTRefSpa t =  "\\subsection{Referencia}\n\n" ++
                        "\\begin{description}\n" ++
                        "\t\\item [Pa\\'is] " ++ techRefCountry t ++ "\n" ++
                        "\t\\item [Organiza\\'on] " ++ techRefOrganization t ++ "\n" ++

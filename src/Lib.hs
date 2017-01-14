@@ -2,7 +2,7 @@ module Lib
     ( someFunc
     ) where
 
-import TechReference
+import LatexFormatter
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
