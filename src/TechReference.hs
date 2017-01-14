@@ -1,10 +1,10 @@
--- TechReference
+-- TechnologyReference
 
 -- This module takes care of representing a referent for a given technology
 -- for later computing associations and viability.
 
 module TechReference
-    ( TechReference(..), toLatexSpa
+    ( TechReference(..)
     ) where
 
 data TechReference = TechReference
@@ -24,14 +24,3 @@ instance Show TechReference where
            "\n\t\tDependency: " ++ techRefDependency t ++
            "\n\t\tExpert: " ++ techRefExpert t ++
            "\n\t\tEmail: " ++ techRefEmail t
-
-
-toLatexSpa :: TechReference -> String
-toLatexSpa t = "\\subsection{Referencia " ++ show (techRefID t) ++ "}\n\n" ++
-               "\\begin{description}\n" ++
-               "\t\\item [Pa\\'is] " ++ techRefCountry t ++ "}\n" ++
-               "\t\\item [Organiza\\'on] " ++ techRefOrganization t ++ "}\n" ++
-               "\t\\item [Dependencia] " ++ techRefDependency t ++ "}\n" ++
-               "\t\\item [Persona] " ++ techRefExpert t ++ "}\n" ++
-               "\t\\item [Email] " ++ techRefEmail t ++ "}\n" ++
-               "\\end{description}\n"
