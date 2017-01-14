@@ -1,14 +1,14 @@
 name:                strategic-reasoner
 version:             0.1.0.0
-synopsis:            Initial project template from stack
+synopsis:            Software for automated reasoning in tech Foresight
 description:         Please see README.md
-homepage:            https://github.com/githubuser/strategic-reasoner#readme
+homepage:            https://github.com/snunezcr/strategic-reasoner#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2017 Author name here
-category:            Web
+author:              Santiago Nunez-Corrales
+maintainer:          snunezcr@gmail.com
+copyright:           2017 Santiago Nunez-Corrales
+category:            Future planning
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
@@ -38,4 +38,4 @@ test-suite strategic-reasoner-test
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/strategic-reasoner
+  location: https://github.com/snunezcr/strategic-reasoner
